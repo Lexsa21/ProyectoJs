@@ -130,7 +130,5 @@ else{
 
 alert("Gracias vuelva prontos!")
 
-//su codigo de ticket es "Math.random()" (1:41 resuelto )
-//const diaCompra=  new Date ()
-//diaCompra.toDateString() (1:46)
+
 //agregar stock de entrada con funcion de orden superior
