@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.show{
+    display: block;
+}
+
+.cart-empty{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    color: #9c9c9c;
+}
+/*-------------------------------- HEADER ----------------------------*/
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #174794;
+    color: #fff;
+    align-items: center;
+}
+
+h1{
+    padding-left: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+header nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 600;
+}
+
+header nav li:hover{
+    color: #fff48f;
+}
+
+.menuHeader i{
+    padding-right: 30px;
+}
+
+
+/*-------------------------------- CSS DE SELECCION DE COMPLEJO (html cine) --------------------------------*/
+.contenedor{
+    width: 100%;
+    height: 100px;
+    background-color: #08285b;
+    display: flex;
+}
+
+.contenedorTitulo{
+    width: 100%;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#complejo1{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+#complejo2{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#0b3270,#ff7f50); /* #6ec5b8;*/
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    border: rgb(228, 227, 227) solid 5px;
+}
+
+h2:hover{
+    color: #fff48f;
+    transition: all .3s;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    background: #333333;
+    list-style: none;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.01s;
+}
+
+.menu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: #fff 1px solid;
+}
+
+.contenedorTitulo:hover .menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ------------------------------------ PROMO CANDY -------------------------------------------*/
+
+.promCandy{
+    height: 800px;
+    background-color: #fff;
+    color: black;
+    margin-top: 100px;
+}
+
+/* ------------------------------------ FOOTER -------------------------------------------*/
+
+footer{
+    height: 200px;
+    background: linear-gradient(to top right,#000 0,#08285b);
+    color: black;
+}
+
+/*----------------------------- CONTENEDOR DE LA IMAGEN DE LA SECCION COMPRA---------------------------------*/
+
+.contenedorCompra{
+    display: flex;
+    height: 500px;
+}
+
+.contenedorImagen{
+    width: 40%;
+}
+
+/*----------------------------- SECCION DE COMPRA DE ENTRADAS---------------------------------*/
+
+.details{
+    padding: 24px;
+    width: 60%;
+}
+
+.details__title{
+    font-size: 2.7em;
+    margin-bottom: 16px;
+}
+
+.details__description{
+    font-size: 0.94em;
+    color: black;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.details__prices{
+    margin-bottom: 24px;
+}
+
+.details__now{
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.fechaEntrada1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    background-color: #d8d8d8;
+    padding: 10px;
+    width: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.fechaEntrada2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    background-color: #d8d8d8;
+    padding: 10px;
+    width: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input{
+    height: 57px;
+    display: flex;
+}
+
+.material-symbols-outlined{
+    padding: 8px 2px;
+    height: 100%;
+}
+
+.material-symbols-outlined:hover{
+    cursor: pointer;
+}
+
+.input__number{
+    width: 100%;
+    border: none;
+    background-color: rgba(245, 245, 245, 0.911);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+}
+
+.input__plus{
+    padding: 19px 3px;
+    height: 100%;
+}
+
+.input__plus:hover{
+    cursor: pointer;
+}
+
+.details__button{
+    background-color: #174794;
+    color: #fff;
+    width: 100%;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.details__button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 156, 74);
+    opacity: 0.6;
+}
+
+/*------------------------------------------------------ CARRITO DE COMPRA  -----------------------------------*/
+
+.header__cart{
+    background-color: rgb(255, 156, 74);
+    width: 35px;
+    padding: 4px;
+    margin-right: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header__cart--notificacion{
+    font-size: 12px;
+}
+
+.contenedorImagen{
+    background-color: #bed7ff;
+    display: flex;
+    border-color: #333333;
+}
+
+.imagenPeli{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenes{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 800px;
+}
+
+/*------------------------ NOTIFICACION CARRITO DE COMPRA ---------------*/
+
+.cart-modal{
+    display: none;
+    width: 360px;
+    height: 260px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px;
+    position: absolute;
+    top: 75px;
+    right: 6px;
+    background-color: #fff;
+}
+
+.cart-modal__tittle{
+    font-weight: 700;
+    padding: 24px;
+    border-bottom: 1px solid rgba(223, 223, 223, 0.822) ;
+}
+
+.cart-modal__chekout-container{
+    padding: 24px;
+}
+
+.cart-modal__details-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    color: #505050;
+}
+
+.cart-modal__image{
+    width: 85px;
+    height: 85px;
+    border-radius: 4px;
+}
+
+.cart-modal__price span{
+    font-weight: 700;
+    color: black;
+}
+
+.cart-modal__delete{
+    cursor: pointer; 
+}
+
+.cart-modal__chekout{
+    background-color: #174794;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
