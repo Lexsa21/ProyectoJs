@@ -4,51 +4,192 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-/*---------------------------------- ENCABEZADO ---------------------------------------*/
+
+.show{
+    display: block;
+}
+/*-------------------------------- HEADER ----------------------------*/
 
 header{
-    background-color: rgba(0, 0, 0, 0.938);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #08285b;
+
     color: #fff;
-    padding: 30px 0px 30px 0px;
-}
-
-header div{
-    display: flex;
-    justify-content: center;
-}
-
-a{
-    font-size: 40px;
-    color: #fff;
-    text-decoration: none;
-}
-
-header div h1 a:hover{
-    color: #00B7D4;
-}
-
-/*----------------------------------bienvenida---------------------------------------*/
-
-.bienvenida{
-    height: 800px;
-    width: 100%;
-    display: flex;
-    background-image: url(./imagenes/Estudiar-en-casa-DAVID-CALLE.jpg);
-    background-size: contain;
-}
-
-.cajaBienvenida{
-    display: flex;
     align-items: center;
 }
 
-.cajaBienvenida p{
-    font-size: 50px;
-    font-family: 'Bungee Spice', cursive;
-    justify-content: center;
+h1{
+    padding-left: 10px;
+    font-size: 40px;
+    cursor: pointer;
 }
 
-/*---------------------------------- GALERIA ---------------------------------------*/
+header nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 600;
+}
+
+header nav li:hover{
+    color: #fff48f;
+}
+
+.menuHeader i{
+    padding-right: 30px;
+}
+
+
+/*-------------------------------- CSS DE SELECCION DE COMPLEJO (html cine) --------------------------------*/
+
+.contenedor{
+    width: 100%;
+    height: 100px;
+    background-color:     #0b3270;
+    display: flex;
+}
+
+#complejo1{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.fondoCines{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#0b3270,#ff7f50); /* #6ec5b8;*/
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    border: rgb(228, 227, 227) solid 5px;
+}
+
+h2:hover{
+    color: #fff48f;
+    transition: all .3s;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    background: #333333;
+    list-style: none;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.01s;
+}
+
+.menu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: #fff 1px solid;
+}
+
+.contenedorTitulo2:hover .menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedorTitulo2{
+    width: 100%;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#complejo2{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#jsonBtn{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#0b3270,#ff7f50); /* #6ec5b8;*/
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    border: rgb(228, 227, 227) solid 5px;
+}
+
+#resultado{
+    position: absolute;
+    background: #333333;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.01s;
+    list-style: none;
+}
+
+#resultado li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: #fff 1px solid;
+}
+
+.contenedorTitulo2:hover #resultado{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ------------------------------------ coming soon -------------------------------------------*/
+
+.tituloson{
+    height: 150px;
+}
+
+h3{
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.contenedorCompra{
+    background-image: linear-gradient(#0b3270,#bed7ff) ;
+    height: 1100px;
+    width: 100%;
+}
+
+.contenedorImagen{
+
+    width: 100%;
+    height: 100%;
+}
+
+.imagenPeli{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.imagenes{
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.espacio{
+    height: 180px;
+}
+/*---------------------------------- CANDY ---------------------------------------*/
 #galeria {
     margin: 0px auto;
     background-image: linear-gradient(135deg,#00B7D4,#505488,#2F3F80,#161569,#5A4894,#A950A1, #FF7CAE);
@@ -90,33 +231,18 @@ header div h1 a:hover{
 }
 
 .cajasSimuladores{
-    margin: 50px 10px 0px 10px;
-    padding: 180px 100px 180px 100px;
-    background-color: #fff;
-    font-size: 30px;
     box-shadow: 0 0 30px rgb(248, 248, 129);
     border-radius: 10px;
+    margin-top: 60px;
+    width: 600px;
+}
+
+/* ------------------------------------ FOOTER -------------------------------------------*/
+
+footer{
+    height: 200px;
+    background: linear-gradient(to top right,#000 0,#08285b);
     color: black;
-}
-
-.cajasSimuladores:hover{
-    transform: scale(1.10);
-    transition: all 0.6s;
-}
-
-
-/* -------------------------------- ESPACIO ---------------------------------*/
-
-.espacio{
-    visibility: hidden;
-    padding-top: 50px;
-}
-
-/*-------------------------------------FOOTER---------------------------------*/
-
-footer {
-    background-color: black;
-    height: 150px;
 }
 
 .logos {
@@ -124,14 +250,10 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #08285b;
 }
 
 .logo {
     height: 40px;
     margin-right: 50px;
-    color: #fff;
 }
-
-
-

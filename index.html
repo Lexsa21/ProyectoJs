@@ -4,63 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100&family=Anek+Latin:wght@100;200;300&family=Anek+Tamil:wght@100&family=Antonio:wght@100&family=Big+Shoulders+Display:wght@100&family=Bungee+Spice&family=Dosis:wght@200&family=Expletus+Sans&family=Judson&family=Montaga&family=Montserrat:wght@300&family=Mukta+Mahee:wght@200&family=Mukta:wght@200&family=Saira+Extra+Condensed:wght@100&family=Source+Serif+4:opsz,wght@8..60,300&display=swap" rel="stylesheet">
-    <title>Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
+    <title>Lexsa Cines</title>
 </head>
 <body>
 
-    <!-------------------------------------Encabezado-------------------------------->
-    <header>
-        <div>
-            <h1><a href="#galeria">Simulator</a></h1>
-        </div>
-    </header>
+<!-- Encabezado-->
+<header>
+    <div class="tituloHeader">
+        <h1>Lexsa Cines</h1>
+    </div>
+    <nav>
+        <ul class="menuHeader">
+            <li class="listaHeader">Home</li>
+            <li class="listaHeader">Nuestros Cines</li>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </ul>
+    </nav>
+</header>
 
-    <!--------------------------------------Bienvenida-------------------------------->
-    <div class="bienvenida">
-        <div class="cajaBienvenida">
-        <p>Hola! <br>Bienvenido a Simulator<br> Una pagina con multiples herramientas de uso cotidiano</p>
+<!-- Carrusel -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../imagenesCine/img1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="../imagenesCine/img2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="../imagenesCine/img3.png" class="d-block w-100" alt="...">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<!--Seleccion de complejo y pelicula-->
+    <div class="contenedor">
+        <div class="contenedorTitulo2">
+            <div id="complejo1">
+                <h2 class="fondoCines">Cine Centro</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="../paginas.html/pelicula1.html">Black Adam</a></li>
+                <li><a href="./paginas.html/pelicula2.html">Black Phanter</a></li>
+                <li><a href="./paginas.html/pelicula3.html">Amsterdam</a></li>
+            </ul>
+        </div>
+        <div class="contenedorTitulo2">
+            <div id="complejo2">
+                <h2 href="#" id="jsonBtn">Cine Norte</h2>
+            </div>
+            <ul id="resultado">
+            </ul>
         </div>
     </div>
 
-    <!----------------------------------------Espacio---------------------------------->
-    <div>
-        <p class="espacio">espacio</p>
-    </div>
-    
-    <!---------------------------------------Galeria----------------------------------->
+    <div class="espacio"></div>
+
+    <!-- Todas las peliculas -->
+
+    <div class="contenedorCompra">
+        <div class="tituloson">
+            <h3>Proximos Estrenos</h3>
+        </div>
+        <div class="contenedorImagen">
+            <div class="imagenPeli">
+                <img src="./imagenesCine/soon3.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/soon1.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/soon4.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/antman.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/avatar2.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/soon2.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/soon6.jpg" alt="" class="imagenes">
+                <img src="./imagenesCine/soon5.jpg" alt="" class="imagenes">
+            </div>
+        </div>
+    </div>    
+
+
+    <div class="espacio"></div>
+    <!---------------------------------------CANDY----------------------------------->
     <div id="galeria">
         <div id="cajaGaleria">
             <div id="tituloGaleria">
                 <h2>
-                    Gallery
+                    Aprovecha tu Candy!
                 </h2>
             </div>
             <div id="simuladores">
                 <div>
-                    <a href="./paginas.html/cineFinal.html"><p class="cajasSimuladores">Simulador de cine</p></a>
-                </div>
-                <div>
-                    <a href="./paginas.html/promedionotas.html"><p class="cajasSimuladores">Simulador promedio de nota</p></a>
-                </div>
-                <div>
-                    <p class="cajasSimuladores">Simulador de algo</p>
+                    <img src="./imagenesCine/candy1.jpg" alt="" class="cajasSimuladores">
                 </div>
             </div>
         </div>
     </div>
 
-    <!----------------------------------------Espacio---------------------------------->
-    <div>
-        <p class="espacio">espacio</p>
-    </div>
+    <div class="espacio"></div>
+    <!-- Footer -->
 
-    <!---------------------------------------Footer----------------------------------->
     <footer class="logos">
         <div>
             <img src="imagenes/facebook.png" alt="" srcset="" class="logo">
@@ -75,5 +126,11 @@
             <img src="imagenes/youtube.png" alt="" srcset="" class="logo">
         </div>
     </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="./js/fetch.js"></script>
+<script src="./js/selecPeli.js"></script>
+<script src="./js/menuPeli.js"></script>
 </body>
 </html>

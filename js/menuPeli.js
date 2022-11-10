@@ -1,3 +1,20 @@
+//Arrays
+
+const cine1 = [
+    {
+        horario1: "14:00",
+        horario2: "17:30",
+    }
+]
+
+const cine2 = [
+    {
+        horario1: "20:00",
+        horario2: "23:00"
+    }
+]
+
+
 //cantidad de entradas que quiere comprar el usuario
 
 let minusBtn = document.querySelector(".material-symbols-outlined");
@@ -9,16 +26,13 @@ let userInputNumber = 0;
 plusBtn.addEventListener("click",()=>{
     userInputNumber++;
     userInput.value = userInputNumber;
-    console.log(userInputNumber);
 });
 
 minusBtn.addEventListener("click",()=>{
     userInputNumber--;
-    if(userInputNumber<=0){
-        userInputNumber = 0;
-    }
+
+    userInputNumber <=0? userInputNumber = 0 : 0;
     userInput.value = userInputNumber;
-    console.log(userInputNumber);
 });
 
 
@@ -27,6 +41,7 @@ minusBtn.addEventListener("click",()=>{
 let fechaEntrada1 = document.querySelector(".fechaEntrada1")
 let fechaEntrada2 = document.querySelector(".fechaEntrada2")
 let fechaElegida = 0
+
 
 fechaEntrada1.addEventListener("click",()=>{
     fechaElegida = "21/11"
@@ -37,6 +52,37 @@ fechaEntrada2.addEventListener("click",()=>{
     fechaElegida = "10/11"
     fechaEntrada2.style.backgroundColor = "rgb(255, 156, 74)";
     fechaEntrada2.style.color = "#fff";
+})
+
+
+//horario elegido pero con inclusion de arrays
+
+let time1 = document.querySelector(".time1")
+let time2 = document.querySelector(".time2")
+let horarioElegido = 0
+
+cine1.forEach((time) =>{
+    let horario = document.querySelector(".time1")
+    horario.innerText = time.horario1
+
+
+    time1.addEventListener("click",()=>{
+        time1.style.backgroundColor = "rgb(255, 156, 74)";
+        time1.style.color = "#fff";
+        horarioElegido = time.horario1
+    })
+})
+
+cine1.forEach((time) =>{
+    let horario = document.querySelector(".time2")
+    horario.innerText = time.horario2
+
+
+    time2.addEventListener("click",()=>{
+        time2.style.backgroundColor = "rgb(255, 156, 74)";
+        time2.style.color = "#fff";
+        horarioElegido = time.horario2
+    })
 })
 
 
@@ -86,9 +132,13 @@ cartIconBtn.addEventListener("click",()=>{
 function buyProduct(){
     const buyProductBtn = document.querySelector(".cart-modal__chekout");
     buyProductBtn.addEventListener("click",()=>{
-        productContainer.innerHTML = '<p class="cart-empty">Gracias por su compra!</p>'
-        lastValue = 0;
-        cartNotificacion.innerText = lastValue;
+        Swal.fire({
+            title: 'Gracias!',
+            text: 'Tu compra fue realizada con exito.',
+            icon: 'success',
+            confirmButtonText: 'Salir',
+            timer: 3000,
+        })
     });
 }
 
@@ -97,11 +147,12 @@ function buyProduct(){
 function drawProductInModal(){
     productContainer.innerHTML = `
         <div class="cart-modal__details-container">
-            <img class="cart-modal__image" src="../imagenesCine/blackadam.jpg" alt="">
+            
             <div>
                 <p class="cart-modal__product">El precio de su pelicula es:</p>
-                <p class="cart-modal__price">$500 x 3 <span>$375.00</span></p>
-                <p class="cart-modal__date">fecha</p>
+                <p class="cart-modal__price"><span></span></p>
+                <p class="cart-modal__date"></p>
+                <p class="cart-modal__hours"></p>
             </div>
             <div class="cart-modal__delete">
             <i class="fa-solid fa-trash"></i>
@@ -113,29 +164,7 @@ function drawProductInModal(){
     priceModal.innerHTML=`$500 x ${lastValue} <span>$${lastValue*500}.00</span>`
     let dateModal = document.querySelector(".cart-modal__date");
     dateModal.innerHTML=`Fecha: ${fechaElegida}`
+    let hoursModal = document.querySelector(".cart-modal__hours");
+    hoursModal.innerHTML=`Horario: ${horarioElegido}`
     buyProduct()
 }
-
-//Para obtener el listado de peliculas Aplico Json y me simplifica la entrega final
-
-const cine1 = {
-    pelicula1: "Avatar",
-    pelicula2: "Black Adam " ,
-    pelicula3: "Blade Runner 1982"
-}
-
-const cine2 = {
-    pelicula1: "El Exorcista",
-    pelicula2: "Halloween",
-    pelicula3: "La Huerfana"
-}
-
-localStorage.setItem("movies", JSON.stringify(cine1))
-
-
-function obtenerPeliculas(){
-
-    let cine1 = JSON.parse(localStorage.getItem(cine1.pelicula1));
-
-}
-
